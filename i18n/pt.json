@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pierre boutet"
+		]
+	},
+	"pdfbookexportrequest-desc": "Reproduzir uma página em formato PDF",
+	"pdfbookexportrequest-print": "Exportar Book PDF"
+}

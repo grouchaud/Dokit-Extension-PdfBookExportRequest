@@ -1,0 +1,35 @@
+{
+	"name": "PdfBookExportRequest",
+	"version": "0.0.0",
+	"author": [
+			"Guillaume Rouchaud"],
+	"url": "",
+	"description": "desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"callback": "PdfBookExportRequestHooks::onRegistration",
+	"config": {
+		"PdfBookExportRequestTab": true,           "@": "Whether or not an action tab is wanted for printing to PDF",
+		"PdfBookExportRequestDownload": true,       "@": "Whether the files should be downloaded or view in-browser",
+		"PdfBookExportRequestWkhtmltopdfParams": "--print-media-type ",
+		"PdfBookExportRequestHeaderFile":"",
+		"PdfBookExportRequestFooterFile":"default",
+		"PdfBookExportRequestWkhtmltopdfReplaceHostname":false
+	},
+	"Hooks": {
+		"ParserFirstCallInit": ["PdfBookExportRequestHooks::parserInit"],
+		"UnknownAction": ["PdfBookExportRequestHooks::onUnknownAction"],
+		"SkinTemplateTabs": ["PdfBookExportRequestHooks::onSkinTemplateTabs"],
+		"SkinTemplateNavigation": ["PdfBookExportRequestHooks::onSkinTemplateNavigation"]
+	},
+	"AutoloadClasses": {
+		"PdfBookExportRequestHooks": "PdfBookExportRequest.hooks.php"
+	},
+	"ExtensionMessagesFiles": {
+		"PdfBookExportRequestHooksMagic": "PdfBookExportRequest.i18n.php"
+	},
+	"MessagesDirs": {
+		"PdfBookExportRequestHooks": ["i18n"]
+	},
+	"manifest_version":1
+}

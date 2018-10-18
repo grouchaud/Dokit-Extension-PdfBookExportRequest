@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pierre boutet"
+		]
+	},
+	"pdfbookexportrequest-desc": "The extension description",
+	"pdfbookexportrequest-print": "the button label to export a book in pdf"
+}

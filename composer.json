@@ -1,0 +1,7 @@
+{
+    "name": "Dokit-Extension-PdfBookExportRequest",
+    "description": "This is a mediawiki extension to export a book to PDF.",
+    "type": "dokit-extension",
+    "require": {
+    }
+}
