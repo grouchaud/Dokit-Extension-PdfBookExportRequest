@@ -80,8 +80,8 @@ class PdfBookExportRequestHooks
             $filename = 'Wikifab-' . str_replace(" ", "", $title->getBaseText());
 
             // Auto Domains
-            // $domain = $_SERVER['HTTP_HOST'];
-            $domain = "dokit";
+             $domain = $_SERVER['HTTP_HOST'];
+ //           $domain = "dokit";
             $prefix = 'http://';
 
             $arr = get_group_pages($title);
@@ -125,7 +125,7 @@ class PdfBookExportRequestHooks
             // generate file if cache file not valid
             if (! file_exists($cacheFile) || $needReload) {
                 echo "file don't exist!";
-                $convertResult = self::convertToPdfWithWkhtmltopdf("http://dokit/w/images/books/book.php", $cacheFile, $options);
+                $convertResult = self::convertToPdfWithWkhtmltopdf($prefix. $domain."/w/images/books/book.php", $cacheFile, $options);
             }
 
             if (file_exists($cacheFile)) {
